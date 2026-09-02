@@ -55,22 +55,18 @@ Recorded so they don't get silently undone:
   hair). Ty's photo is already at its widest possible square crop, so that 54.9% is
   fixed and Chase's crop is derived from it. Re-crop by eye and they stop matching.
 
-## Contact form — NOT YET CONNECTED
+## Contact form
 
 `contact.html` holds the "Talk with the founders" form. GitHub Pages is static, so the
-form must POST to a third-party service. The endpoint is a placeholder:
+form POSTs to Formspree (`https://formspree.io/f/xrpgklbe`), which emails the submission
+to the address owning that Formspree account. Free tier is 50 submissions/month.
 
-```
-action="https://formspree.io/f/REPLACE_WITH_FORM_ID"
-```
+Formspree delivers to one address. To reach both founders, point it at a shared
+`hello@sprucestreetrecovery.com` alias that forwards to both, rather than trying to add a
+second recipient.
 
-Until that is replaced the form validates, then refuses to send and says so. It cannot
-fail silently.
-
-To connect it: create a form at formspree.io, then swap the form id in `contact.html`.
-Free tier is 50 submissions/month. Point it at a single address — ideally a shared
-`hello@sprucestreetrecovery.com` that forwards to both founders — rather than trying to
-deliver to two mailboxes, which most free tiers do not support.
+If the endpoint is ever reset to a placeholder, the form validates and then refuses to
+send, saying so plainly. It cannot fail silently.
 
 `js/main.js` submits over `fetch` and swaps in a thank-you message in place. With
 JavaScript off the form falls back to a normal POST and the service's own confirmation
