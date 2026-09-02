@@ -711,6 +711,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--copper-bright);
   .fact-strip > div:nth-child(-n+2) { border-top: 0; }
   .fact-strip > div:nth-child(2n) { border-right: 0; }
   .fact-strip > div:nth-child(odd) { padding-left: 0; }
+  /* overrides the 3-column rule above, which flushes item 4 left; in two
+     columns item 4 sits in the right column and must line up with 2 and 6 */
+  .fact-strip > div:nth-child(even) { padding-left: 15px; }
   .fact-strip > div:nth-child(3) { border-right: 1px solid var(--line-soft); }
   .simulator::after { display: none; }
   .questions li { padding-left: 48px; font-size: 16px; }
