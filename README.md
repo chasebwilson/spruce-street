@@ -50,13 +50,54 @@ Recorded so they don't get silently undone:
   sequence does not fit the standard column.
 - **Sage, dark green, and tan sections all vertically centre their left column.** Keep
   them consistent.
-- Founder portraits are monochrome because the two source photos have clashing
-  backgrounds (near-black vs light grey). Colour versions do not cohere.
+- Founder portraits are cropped from measured landmarks so head height and headroom
+  occupy the same fraction of each frame (head = 54.9% of the square, 4.5% above the
+  hair). Ty's photo is already at its widest possible square crop, so that 54.9% is
+  fixed and Chase's crop is derived from it. Re-crop by eye and they stop matching.
+
+## Contact form — NOT YET CONNECTED
+
+`contact.html` holds the "Talk with the founders" form. GitHub Pages is static, so the
+form must POST to a third-party service. The endpoint is a placeholder:
+
+```
+action="https://formspree.io/f/REPLACE_WITH_FORM_ID"
+```
+
+Until that is replaced the form validates, then refuses to send and says so. It cannot
+fail silently.
+
+To connect it: create a form at formspree.io, then swap the form id in `contact.html`.
+Free tier is 50 submissions/month. Point it at a single address — ideally a shared
+`hello@sprucestreetrecovery.com` that forwards to both founders — rather than trying to
+deliver to two mailboxes, which most free tiers do not support.
+
+`js/main.js` submits over `fetch` and swaps in a thank-you message in place. With
+JavaScript off the form falls back to a normal POST and the service's own confirmation
+page. The `_gotcha` field is a honeypot; leave it hidden and unlabelled.
+
+**The no-PHI note under the form is deliberate.** The audience is clinicians, and a
+contact form invites them to describe a case. It is ordinary email, not a HIPAA-covered
+channel. Do not remove that line.
+
+## Social preview card
+
+`images/og-image.png` (1200×630) is what appears when the link is texted or posted.
+It was drawn to a canvas in the browser using the site's own woff2 faces — Libre Caslon
+Display for the wordmark, Space Mono for the status line — with the tree drawn from the
+same path data as the inline SVG symbol. Remake it that way rather than mocking it up
+elsewhere, or the type will not match.
+
+`og:image` and `twitter:image` **must stay absolute URLs.** Relative paths are ignored by
+most scrapers, so a link would preview with no image at all.
+
+Platforms cache previews aggressively. After changing the card, re-scrape with
+Facebook's Sharing Debugger or by appending a query string to the shared URL.
 
 ## Known issue
 
 `images/chase-wilson.jpg` derives from a 314×310 LinkedIn-sized copy, not the original.
-Only ~187 real pixels survive the crop, so it is softer than Ty's 24MP studio file and
+Only ~219 real pixels survive the crop, so it is softer than Ty's 24MP studio file and
 caps the portraits at 138px. Replacing it with the full-resolution original is a
 drop-in swap — same filename, square crop, monochrome treatment — and would allow
 larger portraits.

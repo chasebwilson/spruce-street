@@ -42,6 +42,43 @@
     }
   }
 
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('form-status');
+  if (form && status) {
+    var button = form.querySelector('button[type="submit"]');
+    var say = function (msg, cls) {
+      status.textContent = msg;
+      status.className = 'form-status' + (cls ? ' ' + cls : '');
+    };
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        var firstBad = form.querySelector(':invalid');
+        if (firstBad) firstBad.focus();
+        say('Please fill in your name, a valid email, and a message.', 'is-error');
+        return;
+      }
+      if (form.action.indexOf('REPLACE_WITH_FORM_ID') !== -1) {
+        say('This form is not connected to a delivery service yet.', 'is-error');
+        return;
+      }
+      button.disabled = true;
+      say('Sending…');
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (response) {
+        if (!response.ok) throw new Error(response.status);
+        form.innerHTML = '<p class="form-sent">Thank you — your message is on its way. ' +
+          'One of us will be in touch.</p>';
+      }).catch(function () {
+        button.disabled = false;
+        say('That did not send. Please email ty@sprucestreetrecovery.com directly.', 'is-error');
+      });
+    });
+  }
+
   var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
   var links = {};
   Array.prototype.forEach.call(document.querySelectorAll('.head-nav a[href^="#"]:not(.btn)'), function (link) {
