@@ -79,6 +79,8 @@ channel. Do not remove that line.
 ## Social preview card
 
 `images/og-image.png` (1200×630) is what appears when the link is texted or posted.
+It is the inverted treatment — cream tree, wordmark and rule on the spruce ground —
+chosen because message threads are full of light cards and a dark one stands out.
 It was drawn to a canvas in the browser using the site's own woff2 faces — Libre Caslon
 Display for the wordmark, Space Mono for the status line — with the tree drawn from the
 same path data as the inline SVG symbol. Remake it that way rather than mocking it up
