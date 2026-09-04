@@ -70,6 +70,29 @@ Recorded so they don't get silently undone:
   hair). Ty's photo is already at its widest possible square crop, so that 54.9% is
   fixed and Chase's crop is derived from it. Re-crop by eye and they stop matching.
 
+## The Program Overview PDF
+
+**There is no LaTeX source for `docs/Spruce-Street-Program-Overview.pdf`.** It was
+produced with LaTeX (TeX Gyre Pagella, `xdvipdfmx`) somewhere that no longer exists, and
+no `.tex` file is on any machine here. It cannot be rebuilt by recompiling.
+
+Edits are therefore made by re-typesetting inside the PDF itself: the text is recovered
+from the glyph runs, re-broken with TeX hyphenation patterns and the document's own
+spacing rules, and written back into the content stream. The file supplies most of what
+that needs — its own hyphenation choices, its kern pairs, and its justification range
+(stretch 0.68–1.88, median 1.11) are all recoverable from the existing TJ arrays, so new
+text can be set to match. Keep replacements inside that range.
+
+Two constraints are easy to trip over:
+
+- **The embedded fonts are subsets.** They contain only the glyphs LaTeX actually used.
+  There is no `é`, and no accent to compose one from. Any new character has to be checked
+  against the subset before it can be set.
+- **Page numbers are drawn text, and the contents page lists them.** Adding or removing a
+  page means rewriting the footer number on every page after it and updating the affected
+  contents entry. The digits are tabular (all 556 units), so the number's x position does
+  not change.
+
 ## Contact form
 
 `contact.html` holds the "Talk with the founders" form. GitHub Pages is static, so the
