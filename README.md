@@ -50,6 +50,12 @@ Recorded so they don't get silently undone:
   sequence does not fit the standard column.
 - **Sage, dark green, and tan sections all vertically centre their left column.** Keep
   them consistent.
+- **Ty's title at New Life House was Assistant Program Director**, for four years. Never
+  "Program Director" — the claim has to match the job. This appears in the founder card
+  in `index.html` and twice in the Program Overview PDF (pages 9 and 34). Note that
+  "Director" elsewhere in the PDF — `Director-led assessment`, the staffing plan,
+  `Admissions are led by the Director` — refers to Spruce Street's own future role and is
+  correct as written.
 - Founder portraits are cropped from measured landmarks so head height and headroom
   occupy the same fraction of each frame (head = 54.9% of the square, 4.5% above the
   hair). Ty's photo is already at its widest possible square crop, so that 54.9% is
