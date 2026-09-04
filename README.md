@@ -56,6 +56,15 @@ Recorded so they don't get silently undone:
   "Director" elsewhere in the PDF — `Director-led assessment`, the staffing plan,
   `Admissions are led by the Director` — refers to Spruce Street's own future role and is
   correct as written.
+- **The founder bios exist at three lengths and only two of them match.** The website
+  cards and the full overview (PDF pages 34–35) carry the long bios; the condensed
+  overview (PDF page 9) keeps its own short version deliberately. Changing one does not
+  imply changing the others.
+- **"Café Tropical" is spelled without the accent in the PDF only.** The PDF's embedded
+  fonts are subsets that contain no `é` and no acute accent to build one from, so the
+  glyph cannot be set without embedding a new font. The website has the accent.
+- **The overview is 39 pages**, and `index.html` states that count next to the cover.
+  Update it if the PDF ever changes length.
 - Founder portraits are cropped from measured landmarks so head height and headroom
   occupy the same fraction of each frame (head = 54.9% of the square, 4.5% above the
   hair). Ty's photo is already at its widest possible square crop, so that 54.9% is

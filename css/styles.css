@@ -600,7 +600,9 @@ p, h1, h2, h3, dl, dd, figure, ol { margin-top: 0; }
 .intro-note { padding-top: 2px; }
 .founder-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* one founder per row: the bios are long, and two narrow columns of this
+     much text reads as a wall. A wide measure beside the portrait is calmer. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 1px;
   margin-top: clamp(48px, 6vw, 78px);
   background: var(--line);
@@ -615,24 +617,32 @@ p, h1, h2, h3, dl, dd, figure, ol { margin-top: 0; }
 }
 .founder-card {
   position: relative;
+  display: grid;
+  grid-template-columns: clamp(136px, 15vw, 190px) minmax(0, 1fr);
+  column-gap: clamp(30px, 4vw, 60px);
+  align-items: start;
   padding: clamp(28px, 4vw, 48px);
   background: #F8F4EB;
   transition: background .2s ease, box-shadow .2s ease;
 }
 .founder-card:hover { background: #FBF8F0; box-shadow: 0 14px 38px rgba(38, 35, 28, .08); }
 .founder-photo {
-  width: clamp(136px, 15vw, 190px);
+  /* the column is already the clamp; 100% keeps the portrait capped at 190px,
+     which is as large as Chase's source image can go (see README). */
+  width: 100%;
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
-  margin-bottom: clamp(24px, 2.8vw, 34px);
+  margin-bottom: 0;
   border: 1px solid rgba(38, 35, 28, .14);
   filter: saturate(.96);
 }
 .founder-card h3 { margin: 0; color: var(--spruce); font-family: var(--f-display); font-size: clamp(31px, 3vw, 41px); font-weight: 400; line-height: 1.05; }
 .founder-role { margin: 10px 0 24px; color: var(--copper); font-family: var(--f-mono); font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
-.founder-card > p:not(.founder-role) { max-width: 50ch; }
-.founder-card .text-link { margin-top: 12px; word-break: break-word; }
+.founder-body { color: #3E3A32; }
+.founder-body > p { max-width: 68ch; margin-bottom: 17px; }
+.founder-body > p:last-of-type { margin-bottom: 0; }
+.founder-card .text-link { display: inline-block; margin-top: 20px; word-break: break-word; }
 
 /* ---------- Footer ---------- */
 .site-foot {
@@ -718,7 +728,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--copper-bright);
   .simulator::after { display: none; }
   .questions li { padding-left: 48px; font-size: 16px; }
   .questions li::before { width: 28px; height: 28px; top: 21px; font-size: 9px; }
-  .founder-grid { grid-template-columns: 1fr; }
+  /* portrait above the text once there is no room for a side column */
+  .founder-card { grid-template-columns: minmax(0, 1fr); }
+  .founder-photo { width: clamp(136px, 34vw, 172px); margin-bottom: 26px; }
   .foot-top { flex-direction: column; }
   .foot-nav { gap: 11px 21px; }
 }
