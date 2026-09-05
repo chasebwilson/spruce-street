@@ -50,6 +50,11 @@ Recorded so they don't get silently undone:
   sequence does not fit the standard column.
 - **Sage, dark green, and tan sections all vertically centre their left column.** Keep
   them consistent.
+- **The name is settled. Spruce Street is not a "working name" any more.** That phrasing
+  was removed from the footer legal block on both pages, from the pre-opening strips on
+  PDF pages 2 and 11, and from the italic disclaimer on PDF pages 9 and 39. The rest of
+  that disclaimer — a program in development, not an offer of services — still stands and
+  should stay.
 - **Ty's title at New Life House was Assistant Program Director**, for four years. Never
   "Program Director" — the claim has to match the job. This appears in the founder card
   in `index.html` and twice in the Program Overview PDF (pages 9 and 34). Note that
