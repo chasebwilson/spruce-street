@@ -9,6 +9,21 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  /* The wordmark links to #top, but .site-head is position:sticky, so once it is
+     stuck its box is already at the top of the viewport and the browser decides
+     no scrolling is needed -- the click does nothing. Scroll explicitly instead. */
+  var brand = document.querySelector('a.brand[href^="#"]');
+  if (brand) {
+    brand.addEventListener('click', function (event) {
+      event.preventDefault();
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+      if (window.history && history.replaceState) {
+        history.replaceState(null, '', location.pathname + location.search);
+      }
+    });
+  }
+
   var toggle = document.querySelector('.menu-toggle');
   var mobileNav = document.getElementById('mobile-nav');
   if (toggle && mobileNav) {

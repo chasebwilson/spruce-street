@@ -54,6 +54,12 @@ Recorded so they don't get silently undone:
   divides Part One and page 11 divides Part Two; they share a layout (tree, copper part
   label at -257.535, grey line at -283.637, title at -338.421, copper rule, italic
   subtitle at -421.141, centred paragraph from -463.464). Neither divider is numbered.
+- **The wordmark's "back to top" needs JavaScript, and that is not an oversight.**
+  `.site-head` is `position: sticky`, so once it is stuck the `#top` anchor on it is
+  already at the top of the viewport and the browser decides no scroll is needed — the
+  click does nothing at all. `js/main.js` intercepts the click and calls `scrollTo(0)`.
+  Moving the id to an empty element at document top does not help; a zero-area element
+  is not a valid scroll target.
 - **The founder cards carry no role line.** The small copper "Programming and daily
   operations" / "Business operations and finance" labels were removed; the bios say the
   same thing in their first sentence. The gap they used to provide now lives on the
