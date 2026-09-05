@@ -50,31 +50,35 @@ Recorded so they don't get silently undone:
   sequence does not fit the standard column.
 - **Sage, dark green, and tan sections all vertically centre their left column.** Keep
   them consistent.
-- **The two part-opening pages are deliberately identical.** PDF page 2 (Part One) and
-  page 11 (Part Two) carry the same masthead in the same positions: one grey small-caps
+- **Each part has a divider page and an opening page, and both pairs match.** PDF page 2
+  divides Part One and page 11 divides Part Two; they share a layout (tree, copper part
+  label at -257.535, grey line at -283.637, title at -338.421, copper rule, italic
+  subtitle at -421.141, centred paragraph from -463.464). Neither divider is numbered.
+- **The two part-opening pages are deliberately identical.** PDF page 3 (Part One) and
+  page 12 (Part Two) carry the same masthead in the same positions: one grey small-caps
   line at 714.36, the title at 669.33, the two italic lines at 638.24 and 621.31, the URL
   at 600.50, and body text starting at 578.22. Keep them in step. Page 10 is a different
   thing — a mid-document divider announcing Part Two, and Part One has no counterpart
-  because the cover serves that role.
+  because each part now has one.
 - **The name is settled. Spruce Street is not a "working name" any more.** That phrasing
   was removed from the footer legal block on both pages, from the pre-opening strips on
-  PDF pages 2 and 11, and from the italic disclaimer on PDF pages 9 and 39. The rest of
+  PDF pages 3 and 12, and from the italic disclaimer on PDF pages 10 and 40. The rest of
   that disclaimer — a program in development, not an offer of services — still stands and
   should stay.
 - **Ty's title at New Life House was Assistant Program Director**, for four years. Never
   "Program Director" — the claim has to match the job. This appears in the founder card
-  in `index.html` and twice in the Program Overview PDF (pages 9 and 34). Note that
+  in `index.html` and twice in the Program Overview PDF (pages 10 and 35). Note that
   "Director" elsewhere in the PDF — `Director-led assessment`, the staffing plan,
   `Admissions are led by the Director` — refers to Spruce Street's own future role and is
   correct as written.
 - **The founder bios exist at three lengths and only two of them match.** The website
-  cards and the full overview (PDF pages 34–35) carry the long bios; the condensed
-  overview (PDF page 9) keeps its own short version deliberately. Changing one does not
+  cards and the full overview (PDF pages 35–36) carry the long bios; the condensed
+  overview (PDF page 10) keeps its own short version deliberately. Changing one does not
   imply changing the others.
 - **"Café Tropical" is spelled without the accent in the PDF only.** The PDF's embedded
   fonts are subsets that contain no `é` and no acute accent to build one from, so the
   glyph cannot be set without embedding a new font. The website has the accent.
-- **The overview is 39 pages**, and `index.html` states that count next to the cover.
+- **The overview is 40 pages**, and `index.html` states that count next to the cover.
   Update it if the PDF ever changes length.
 - Founder portraits are cropped from measured landmarks so head height and headroom
   occupy the same fraction of each frame (head = 54.9% of the square, 4.5% above the
