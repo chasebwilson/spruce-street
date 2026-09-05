@@ -54,6 +54,10 @@ Recorded so they don't get silently undone:
   divides Part One and page 11 divides Part Two; they share a layout (tree, copper part
   label at -257.535, grey line at -283.637, title at -338.421, copper rule, italic
   subtitle at -421.141, centred paragraph from -463.464). Neither divider is numbered.
+- **The founder cards carry no role line.** The small copper "Programming and daily
+  operations" / "Business operations and finance" labels were removed; the bios say the
+  same thing in their first sentence. The gap they used to provide now lives on the
+  `h3` bottom margin, so removing that margin would close the name up against the bio.
 - **The two part-opening pages are deliberately identical.** PDF page 3 (Part One) and
   page 12 (Part Two) carry the same masthead in the same positions: one grey small-caps
   line at 714.36, the title at 669.33, the two italic lines at 638.24 and 621.31, the URL
