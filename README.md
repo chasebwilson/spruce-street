@@ -50,6 +50,12 @@ Recorded so they don't get silently undone:
   sequence does not fit the standard column.
 - **Sage, dark green, and tan sections all vertically centre their left column.** Keep
   them consistent.
+- **The two part-opening pages are deliberately identical.** PDF page 2 (Part One) and
+  page 11 (Part Two) carry the same masthead in the same positions: one grey small-caps
+  line at 714.36, the title at 669.33, the two italic lines at 638.24 and 621.31, the URL
+  at 600.50, and body text starting at 578.22. Keep them in step. Page 10 is a different
+  thing — a mid-document divider announcing Part Two, and Part One has no counterpart
+  because the cover serves that role.
 - **The name is settled. Spruce Street is not a "working name" any more.** That phrasing
   was removed from the footer legal block on both pages, from the pre-opening strips on
   PDF pages 2 and 11, and from the italic disclaimer on PDF pages 9 and 39. The rest of
