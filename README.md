@@ -1,6 +1,6 @@
 # Spruce Street
 
-Marketing site for Spruce Street — a proposed twelve-month structured sober living
+Marketing site for Spruce Street — a twelve-month residential social model recovery
 program for men ages 24–35 in the Philadelphia area. Audience is clinicians and
 referral partners, not prospective residents.
 
@@ -38,6 +38,14 @@ are live mailboxes on this domain. The MX, SPF, DKIM, `_dmarc`, `autodiscover`, 
 
 Recorded so they don't get silently undone:
 
+- **Spruce Street is a recovery program, not a sober living.** Never describe it as
+  sober living. The phrase stays in exactly two places, both naming the category Spruce
+  Street is contrasted with: the Why section ("Sober living is the setting most often
+  expected to fill that role") and the first clinician question ("more structure than
+  conventional sober living typically provides"). Both are deliberate. The same rule
+  holds in the PDF: pages 3 and 12 describe the program as "a twelve-month residential
+  social model recovery program"; pages 4, 15 and 16 keep "sober living" because they
+  name the category, not Spruce Street.
 - **The tone is restrained on purpose.** The audience is clinical. Understatement reads
   as competence to them; superlatives read as marketing. No adjectives that tell the
   reader how to feel.
