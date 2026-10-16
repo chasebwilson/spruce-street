@@ -1,7 +1,7 @@
 # Spruce Street
 
 Marketing site for Spruce Street — a twelve-month residential social model recovery
-program for men ages 24–35 in the Philadelphia area. Audience is clinicians and
+program for men ages 24–35 in Philadelphia. Audience is clinicians and
 referral partners, not prospective residents.
 
 **Live:** https://sprucestreetrecovery.com
@@ -43,12 +43,14 @@ Recorded so they don't get silently undone:
   Street is contrasted with: the Why section ("Sober living is the setting most often
   expected to fill that role") and the first clinician question ("more structure than
   conventional sober living typically provides"). Both are deliberate. The same rule
-  holds in the PDF: pages 3 and 12 describe the program as "a twelve-month residential
+  holds in the PDF: pages 3 and 12 describe the program as "a twelve-month, residential,
   social model recovery program"; pages 4, 15 and 16 keep "sober living" because they
   name the category, not Spruce Street.
 - **The tone is restrained on purpose.** The audience is clinical. Understatement reads
   as competence to them; superlatives read as marketing. No adjectives that tell the
   reader how to feel.
+- **"social model" is a fixed term too** and carries a non-breaking space in the hero
+  heading for the same reason.
 - **"step down" is a fixed clinical term** and carries a non-breaking space in the Why
   heading so it can never split across lines.
 - **The disclaimer appears exactly three times** — hero status line, the note under the
